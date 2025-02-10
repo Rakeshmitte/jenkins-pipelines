@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('System Info') {
+            steps {
+                sh 'free -h'  // Check memory
+            }
+        }
+        stage('Setup Files') {
+            steps {
+                sh '''
+                    mkdir -p /tmp/jenkins_demo
+                    echo "Pipeline File" > /tmp/jenkins_demo/demo.txt
+                    ls -l /tmp/jenkins_demo
+                '''
+            }
+        }
+    }
+}
