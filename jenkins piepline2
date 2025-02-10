@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    stages {
+        stage ("1. update the system"){
+            steps {
+                sh "mkdir -p test"
+                sh "touch test.txt"
+            }
+        }
+
+        stage ("2. print memory and disk"){
+            steps{
+                sh "ls"
+                sh "ls -a"
+                sh "lsblk"
+                sh "free -m"
+                sh "touch test.txt"
+                sh "df -h"
+                sh "du -ksh"
+                sh "touch iostat.txt"
+            }
+        }
+        
+        stage ("3. print the current date and logged in user"){
+            steps{
+                sh "date"
+                sh "cal 2025"
+                sh "whoami"
+            }
+        }
+
+        stage ("4. uptime of the system"){
+            steps{
+                sh "uptime"
+                sh "iostat"
+            }
+        }
+    } 
+}
