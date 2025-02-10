@@ -1,0 +1,7 @@
+==> jenkins pipelines is a suite of jenkins features,installed as plugins which enables implements as continous delivery pipelines
+    which are automated processes for getting software from source control through deployement to end users
+
+===> every change to yur software goes through a complex process on its way to bieng realeased
+
+===> this process involves building the software in a realable and repeatable manner,as well as progressing the built 
+     software through multiple stages of testing and deployement
